@@ -12,6 +12,7 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -65,35 +66,6 @@ public class StudentController {
 		return "student-confirmation";
 	}
 	
-	@ResponseBody
-	@RequestMapping(value="/studentlist",method=RequestMethod.GET)
-	public ArrayList<Student> getStudentsList() {
-		
-		Student student1 = new Student();
-		student1.setFirstName("Sunil");
-		student1.setLastName("Jacob");
-		student1.setCountry("India");
-		student1.setLanguage("English");
-		
-		Student student2 = new Student();
-		student2.setFirstName("Jojo");
-		student2.setLastName("John");
-		student2.setCountry("France");
-		student2.setLanguage("French");
-		
-		Student student3 = new Student();
-		student3.setFirstName("Abel");
-		student3.setLastName("Jacob");
-		student3.setCountry("Germany");
-		student3.setLanguage("French");
-		
-		
-		ArrayList<Student> studentList = new ArrayList<Student>();
-		studentList.add(student1);
-		studentList.add(student2);
-		studentList.add(student3);
-		
-		return studentList;
-	}
+
 
 }
