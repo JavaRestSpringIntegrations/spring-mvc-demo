@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -23,6 +24,14 @@ public class HelloWorldController {
 		return "helloworld";
 	}
 	
+	//Gontu Series - Start
+	@RequestMapping("/welcome/{countryName}/{userName}")
+	public String helloWorld(@PathVariable("userName") String name,@PathVariable("countryName") String country) { 
+		//Pathvariable tells to bind {userName} value in the incoming request URL to name variable
+		return "hworld";
+		
+	}
+	//Gontu Series - End
 	//new controller method to read form data and also add data to the model
 	@RequestMapping("/processFormVersionTwo")
 	public String letsShout(HttpServletRequest request,Model model) { //httpServletRequest will hold form data

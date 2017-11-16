@@ -8,7 +8,7 @@
 
 	<!-- Spring MVC Configs -->
 
-	<!-- Step 1: Configure Spring MVC Dispatcher Servlet -->
+	<!-- Step 1: Configure Spring MVC Dispatcher Servlet.. Tells all web requests should be maps to Spring MVC -->
 	<servlet>
 		<servlet-name>dispatcher</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>

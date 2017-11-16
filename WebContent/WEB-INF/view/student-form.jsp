@@ -4,15 +4,23 @@
 <head>
     <link rel="stylesheet" type="text/css"           
            href="${pageContext.request.contextPath}/resources/css/test.css">
-    <title>Student Registration Form</title>       
+    <h1>${headerMessage}</h1>       
+    <title>Student Registration Form</title>
+           
 </head>
 <body>
+	<form:errors path="student.*"></form:errors>
 	<form:form action="processForm" modelAttribute="student">
 		First Name: <form:input path="firstName"/>
 		<br><br>
 		Last Name: <form:input path="lastName"/>
 		<br><br>
-		
+		Mobile Number: <form:input path="mobileNumber"/>
+		<br><br>
+		Hobby: <form:input path="studentHobby"/>
+		<br><br>
+	<!--	DOB : <form:input path="DOB"/> -->
+		<br><br>
 		<form:select path="country">
 	<!--   	<form:option value="Brazil" label="Brazil"></form:option>
 			<form:option value="France" label="France"></form:option>
@@ -32,6 +40,15 @@
 		Linux<form:checkbox path="operatingSystem" value="Linux"/>
 		Windows<form:checkbox path="operatingSystem" value="Windows"/>
 		<br><br>
+		Address:
+		Country: <form:input path="studentAddress.country"/>
+		<br><br>
+	    city: <form:input path="studentAddress.city"/> 
+		<br>
+		street: <form:input path="studentAddress.street"/>
+		<br>
+		pincode: <form:input path="studentAddress.pincode"/>
+		<br>
 		<input type="submit" value="Submit">
 		<br><br>
 	</form:form>

@@ -16,6 +16,10 @@ The student is confirmed:  ${student.firstName} ${student.lastName} from ${stude
 <br><br>
 Language: ${student.language}
 <br><br>
+Hobby: ${student.studentHobby}
+<br><br>
+<!-- DOB: ${student.DOB} -->
+<br><br>
 OS:
 <ul>
 	<c:forEach var="temp" items="${student.operatingSystem}">
@@ -24,5 +28,16 @@ OS:
 	
 	</c:forEach>
 </ul>
+<br><br>
+Mobile Number : ${student.mobileNumber}
+<br><br>
+Address:
+Country: ${student.studentAddress.country}
+<br>
+City : ${student.studentAddress.city}
+<br>
+Street: ${student.studentAddress.street}
+<br>
+Pincode: ${student.studentAddress.pincode}
 </body>
 </html>

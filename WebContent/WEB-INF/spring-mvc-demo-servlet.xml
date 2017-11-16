@@ -29,6 +29,7 @@
 	<bean id="messageSource"
 			class="org.springframework.context.support.ResourceBundleMessageSource">
 		<property name="basenames" value="resources/messages"></property>	
+		<!-- <property name="cacheSeconds" value="1" />  At run time load the changes made to this file every 1 sec, only in DEV -->
 	</bean>
 </beans>
 
